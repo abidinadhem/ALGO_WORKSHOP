@@ -1,0 +1,21 @@
+ALGORITHM sentence_check
+VAR
+    numChar,numWords,numWhiteSpace,numVowels: INTEGER:=0;
+    i:INTEGER:=0;
+    text[]:STRING;
+BEGIN
+READ (text)
+    FOR i FROM 0 TO text.length STEP step DO
+    numChar:=numChar+1;
+    IF (text[i] :=" ") THEN
+        numWhiteSpace:=numWhiteSpace+1
+    END_IF
+    IF (text[i] :=" ") THEN
+        numWords := numWhiteSpace+1
+    END_IF
+    FOR i FROM 0 TO text.length STEP step  DO
+        IF (text[i]=="a" or text[i]=="e" or text[i]=="i" or text[i]=="u") THEN
+            numVowels:=numVowels+1
+        END_IF
+    END_FOR
+END
